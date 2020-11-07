@@ -1,8 +1,13 @@
+import { Fragment } from 'react';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+
 function App() {
   return (
-    <div className='App'>
-      <h1>Hola Mundo</h1>
-    </div>
+    <Fragment>
+      <Header />
+      <Footer />
+    </Fragment>
   );
 }
 
