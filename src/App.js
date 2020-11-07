@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Producto from './components/Producto/Producto';
 
 function App() {
   //Crear listado de productos
@@ -17,6 +18,10 @@ function App() {
   return (
     <Fragment>
       <Header titulo='Tienda Virtual' />
+      <h3>Lista de Productos</h3>
+      {productos.map((producto) => (
+        <Producto key={producto.id} producto={producto} />
+      ))}
       <Footer fecha={fecha} />
     </Fragment>
   );

@@ -1,5 +1,7 @@
+//imr
 import React from 'react';
 
+//sfc
 const Footer = ({ fecha }) => {
   return (
     <footer>
