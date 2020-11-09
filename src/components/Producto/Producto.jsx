@@ -2,12 +2,13 @@
 import React from 'react';
 
 //sfc
-const Producto = ({ producto }) => {
+const Producto = ({ producto, carrito, setCarrito }) => {
   const { nombre, precio } = producto;
 
   //Agregar al carrito
-  const seleccionarProducto = (nombreProducto) => {
-    console.log(`Comprando ${nombreProducto}...`);
+  const seleccionarProducto = (producto) => {
+    setCarrito([...carrito, producto]);
+    console.log(`Comprando ${producto.nombre}...`);
   };
 
   //Comprando
@@ -22,7 +23,7 @@ const Producto = ({ producto }) => {
         type='button'
         id='comprar'
         //notar que esta función con parámetros debe pasar dentro de un anonymous function
-        onClick={() => seleccionarProducto(nombre)}>
+        onClick={() => seleccionarProducto(producto)}>
         Comprar Este Producto
       </button>
       <button
